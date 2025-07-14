@@ -8,7 +8,7 @@ class Persona:
 
 class Cliente(Persona):
 
-    def __init__(self, nombre, apellido, numero_cuenta, balance):
+    def __init__(self, nombre, apellido, numero_cuenta, balance = 0):
         super().__init__(nombre, apellido)
         self.numero_cuenta = numero_cuenta
         self.balance = balance
@@ -53,9 +53,8 @@ def crear_cliente():
     apellido = input("Ingrese su(s) apellido(s): ")
     limpiar_pantalla()
     numero_cuenta = input("Indique cuál es su nro de cuenta bancaria: ")
-    balance = 5000
 
-    cliente = Cliente(nombre,apellido,numero_cuenta,balance)
+    cliente = Cliente(nombre,apellido,numero_cuenta)
 
     return cliente
 
